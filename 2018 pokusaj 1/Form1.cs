@@ -45,6 +45,8 @@ namespace _2018_pokusaj_1
 
                 if ((x > -50 && x < 50) && (y >= 1 && y <= 10))
                 {
+
+                    // 1.1
                     int[] b = new int[N + 1];
                     for(int i=0; i<a.Length; i++)
                     {
@@ -67,6 +69,27 @@ namespace _2018_pokusaj_1
                         label7.Text = label7.Text + " " + b[i];
                     }
 
+
+                    // 1.2
+                    int[] c = a;
+                    int srednjaVredonst = 0;
+                    for(int i=0; i< c.Length; i++)
+                    {
+                        if (i % 2 == 0)
+                        {
+                            if (c[i] % 2 != 0)
+                            {
+                                c[i] = c[i] ^ i;
+                            }
+                        }
+                        srednjaVredonst = srednjaVredonst + c[i];
+                    }
+                    srednjaVredonst = srednjaVredonst / c.Length;
+                    
+                    foreach (var number in c)
+                    {
+                        label8.Text = label8.Text + " " + number; 
+                    }
                 }
                 else
                 {

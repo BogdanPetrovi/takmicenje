@@ -188,7 +188,6 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(283, 87);
             this.label8.TabIndex = 17;
-            this.label8.Text = "label8";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
@@ -206,7 +205,6 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(283, 87);
             this.label10.TabIndex = 21;
-            this.label10.Text = "label10";
             // 
             // label11
             // 
@@ -222,7 +220,6 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(283, 87);
             this.label12.TabIndex = 19;
-            this.label12.Text = "label12";
             // 
             // label13
             // 
