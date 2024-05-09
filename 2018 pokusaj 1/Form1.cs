@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -85,11 +86,46 @@ namespace _2018_pokusaj_1
                         srednjaVredonst = srednjaVredonst + c[i];
                     }
                     srednjaVredonst = srednjaVredonst / c.Length;
-                    
+                    int prvaVrednost = Math.Abs(c[0] - srednjaVredonst);
+                    int indeksVrednosti = 0;
+                    for (int i = 1; i < c.Length; i++)
+                    {
+                        if (prvaVrednost > Math.Abs(c[i] - srednjaVredonst))
+                        {
+                            prvaVrednost = Math.Abs(c[i] - srednjaVredonst);
+                            indeksVrednosti = i;
+                        }
+                    }
+                    for (int i = indeksVrednosti + 1; i < c.Length; i++)
+                    {
+                        c[i - 1] = c[i];
+                    }
+                    c[c.Length - 1] = 0;
                     foreach (var number in c)
                     {
                         label8.Text = label8.Text + " " + number; 
                     }
+
+                    
+                    //1.3
+                    int[] d = new int[N];
+                    for (int i = 0; i < d.Length; i++)
+                    {
+                        if (Math.Abs(a[i]) > 0 && Math.Abs(a[i]) < 10)
+                        {
+                            d[i] = a[i];
+                        }
+                        else
+                        {
+                            d[i] = a[a.Length - 1];
+                        }
+                        label12.Text = label12.Text + " " + d[i];
+                        label10.Text = label10.Text + " " + a[i];
+                    }
+
+
+
+
                 }
                 else
                 {
