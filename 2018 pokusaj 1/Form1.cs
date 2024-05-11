@@ -39,6 +39,8 @@ namespace _2018_pokusaj_1
                 a[3] = int.Parse(textBox4.Text);
                 a[4] = int.Parse(textBox5.Text);
                 a[5] = int.Parse(textBox6.Text);
+                
+
 
                 int x = int.Parse(textBox8.Text);
                 int y = int.Parse(textBox9.Text);
@@ -69,10 +71,15 @@ namespace _2018_pokusaj_1
                     {
                         label7.Text = label7.Text + " " + b[i];
                     }
-
+                    
 
                     // 1.2
-                    int[] c = a;
+                    int[] c = new int[N];
+                    for (int i = 0; i<a.Length; i++)
+                    {
+                        c[i] = a[i];
+                    }
+                    
                     int srednjaVredonst = 0;
                     for(int i=0; i< c.Length; i++)
                     {
@@ -85,6 +92,9 @@ namespace _2018_pokusaj_1
                         }
                         srednjaVredonst = srednjaVredonst + c[i];
                     }
+
+                    
+
                     srednjaVredonst = srednjaVredonst / c.Length;
                     int prvaVrednost = Math.Abs(c[0] - srednjaVredonst);
                     int indeksVrednosti = 0;
@@ -96,6 +106,8 @@ namespace _2018_pokusaj_1
                             indeksVrednosti = i;
                         }
                     }
+                    
+
                     for (int i = indeksVrednosti + 1; i < c.Length; i++)
                     {
                         c[i - 1] = c[i];
@@ -105,27 +117,30 @@ namespace _2018_pokusaj_1
                     {
                         label8.Text = label8.Text + " " + number; 
                     }
-
                     
+
                     //1.3
                     int[] d = new int[N];
+                    string broj;
+                    int uporedjivanje;
                     for (int i = 0; i < d.Length; i++)
                     {
                         if (Math.Abs(a[i]) > 0 && Math.Abs(a[i]) < 10)
                         {
-                            d[i] = a[i];
+                            d[i] = Math.Abs(a[i]);
                         }
                         else
                         {
-                            d[i] = a[a.Length - 1];
+                            broj = a[i].ToString();
+                            for(int j = 1; j<= broj.Length; j++)
+                            {
+                               
+                            }
                         }
                         label12.Text = label12.Text + " " + d[i];
-                        label10.Text = label10.Text + " " + a[i];
                     }
-
-
-
-
+                    
+                    
                 }
                 else
                 {
@@ -153,6 +168,11 @@ namespace _2018_pokusaj_1
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
         {
 
         }
